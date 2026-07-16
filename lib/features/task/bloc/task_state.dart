@@ -1,4 +1,4 @@
-import 'task_model.dart';
+import 'package:task_manager/task/task_model.dart';
 
 /// User -> TaskAdded -> TaskBloc -> TaskState -> UI Rebuild
 enum TaskFilter { all, pending, completed }
