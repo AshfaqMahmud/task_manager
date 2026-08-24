@@ -1,0 +1,10 @@
+# Ignore native platform runners from language statistics
+windows/* linguist-vendored
+linux/* linguist-vendored
+android/* linguist-vendored
+ios/* linguist-vendored
+web/* linguist-vendored
+macos/* linguist-vendored
+
+# Explicitly mark Dart as the primary language for lib files
+lib/*.dart linguist-detectable=true
