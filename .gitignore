@@ -1,103 +1,107 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# VS Code
-.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
+# ----------------------------------------------------------------------
+# Flutter / Dart Specifics
+# ----------------------------------------------------------------------
 .dart_tool/
+.fvm/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
 .pub-cache/
 .pub/
-/build/
-/pubspec.lock
-coverage/
+build/
 
-# Symbolication related
-app.*.symbols
+# Symbol files and web build outputs
+*.darttool
+*.mkspec
+*.symbols
 
-# Obfuscation related
-app.*.map.json
+# Generated code (Freezed, Injectable, JsonSerializable, etc.)
+*.g.dart
+*.freezed.dart
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# ----------------------------------------------------------------------
+# Android Specifics
+# ----------------------------------------------------------------------
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/app/src/debug/libs/
+android/app/src/profile/libs/
+android/app/src/release/libs/
+android/.gradle/
+android/local.properties
+android/captures/
+android/gradleApp.setting
+android/key.properties
 
-# Android
-/android/.gradle
-/android/captures
-/android/gradlew
-/android/gradlew.bat
-/android/local.properties
-/android/**/GeneratedPluginRegistrant.java
-/android/key.properties
-*.jks
+# Android keystore files
 *.keystore
+*.jks
 
-# iOS
-**/ios/Pods/
-**/ios/.symlinks/
+# ----------------------------------------------------------------------
+# iOS / macOS Specifics
+# ----------------------------------------------------------------------
+**/ios/Flutter/App.framework
 **/ios/Flutter/Flutter.framework
 **/ios/Flutter/Flutter.podspec
 **/ios/Flutter/Generated.xcconfig
-**/ios/Flutter/ephemeral/
 **/ios/Flutter/app.flx
 **/ios/Flutter/app.zip
 **/ios/Flutter/flutter_assets/
-**/ios/Flutter/flutter_export_environment.sh
 **/ios/ServiceDefinitions.json
-**/ios/Runner/GeneratedPluginRegistrant.*
+**/ios/Runner.gitignore
+**/ios/Runner.method
+**/macOS/Flutter/ephemeral/
 
-# macOS
-**/macos/Pods/
-**/macos/Flutter/GeneratedPluginRegistrant.swift
-**/macos/Flutter/ephemeral/
+# CocoaPods artifacts
+**/Pods/
+**/Podfile.lock
+**/DerivedData/
+*.xcworkspace
+!**/Runner.xcworkspace
 
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# ----------------------------------------------------------------------
+# Desktop / Web Specifics
+# ----------------------------------------------------------------------
 # Windows
-**/windows/flutter/generated_plugin_registrant.cc
-**/windows/flutter/generated_plugin_cmake_header.h
+windows/flutter/ephemeral/
+*.vcxproj.user
 
 # Linux
-**/linux/flutter/generated_plugin_registrant.cc
+linux/flutter/ephemeral/
 
 # Web
-**/web/favicon.png
-**/web/icons/Icon-192.png
-**/web/icons/Icon-512.png
-**/web/icons/Icon-maskable-192.png
-**/web/icons/Icon-maskable-512.png
-**/web/manifest.json
+web/manifest.json.tmp
 
-# FVM
-.fvm/
+# ----------------------------------------------------------------------
+# IDE & System Files
+# ----------------------------------------------------------------------
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
 
-# Environment
-.env
-.env.*
+# Android Studio / IntelliJ
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
 
-# Generated files
-*.g.dart
-*.freezed.dart
-*.mocks.dart
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
